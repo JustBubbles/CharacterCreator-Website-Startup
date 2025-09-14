@@ -66,3 +66,15 @@ We would suggest that you do both options. Keep your server running and associat
 "Note that your elastic IP address is allocated until you release it, not until you terminate your instance. So make sure you release it when you no longer need it. Otherwise you will get a nasty $3 bill every month."
 
 I did both.
+
+#Domain Names and IP Addresses
+Domain names make it easy for humans to reference IP addresses. \(Instead of typing the IP address into the search bar, you type a domain name\).
+To find the IP address a domain name references, use the `dig` command:
+`dig [domain name]`
+
+When connecting to another device, you hop across the network to reach it. The route is dynamically calculated each time you connect.
+Use `traceroute` to see each router you connect to on the way.
+`traceroute [domain name]`
+
+"You can get information about a domain name from the domain name registry using the `whois` console utility."
+`whois byu.edu`
