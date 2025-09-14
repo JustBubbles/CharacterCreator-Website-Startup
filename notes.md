@@ -67,7 +67,7 @@ We would suggest that you do both options. Keep your server running and associat
 
 I did both.
 
-#Domain Names and IP Addresses
+# Domain Names and IP Addresses
 Domain names make it easy for humans to reference IP addresses. \(Instead of typing the IP address into the search bar, you type a domain name\).
 To find the IP address a domain name references, use the `dig` command:
 `dig [domain name]`
