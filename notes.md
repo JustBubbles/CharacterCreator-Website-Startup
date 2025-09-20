@@ -349,3 +349,68 @@ p {
 
 `[x]% {}` --> define what should happen at x% of the way through the animation. (example above shows 95% {})
 
+# HTML
+HTML = Hyper Tet Markup Language
+SPA = Single Page Application
+MPA = Multi-Page Application
+
+HTML defines a header (<!DOCTYPE html>) that tells the browser the type and version of the document. You should always include this at the top of the HTML file.
+
+Attributes:
+- Can use single or double quotes ('' or "")
+
+## Common Elements:
+| element	| meaning |
+|---|---|
+html	| The page container
+head	| Header information
+title	| Title of the page
+meta	| Metadata for the page such as character set or viewport settings
+script	| JavaScript reference. Either a external reference, or inline
+include	| External content reference
+body	| The entire content body of the page
+header	| Header of the main content
+footer	| Footer of the main content
+nav	| Navigational inputs
+main	| Main content of the page
+section	| A section of the main content
+aside	| Aside content from the main content
+div	| A block division of content
+span	| An inline span of content
+h<1-9>	| Text heading. From h1, the highest level, down to h9, the lowest level
+p	| A paragraph of text
+b	| Bring attention (bold)
+table	| Table
+tr	| Table row
+th	| Table header
+td	| Table data
+ol,ul	| Ordered or unordered list
+li	| List item
+a	| Anchor the text to a hyperlink
+img	| Graphical image reference
+dialog	| Interactive component such as a confirmation
+form	| A collection of user input
+input	| User input field
+audio	| Audio content
+video	| Video content
+svg	| Scalable vector graphic content
+iframe	| Inline frame of another HTML page
+
+Use `<!--[text]-->` in order to mak comments in HTML.
+
+## Special Characters
+Entity Syntax for Common Special Characters
+| Character	| Entity |
+&	| \&amp;
+<	| \&lt;
+>	| \&gt;
+"	| \&quot;
+'	| \&apos;
+😀	| \&#128512; (unicode example)
+
+You can also use the entity syntax to represent any unicode character.
+
+By default a web server will display the HTML file named `index.html` if a specific HTML file is not requested by the web browser. This is why it's common to name your main HTML file `index.html`.
+Ex: You search for `https://google.com`.
+    It will actually request for `https://google.com/index.html`.
+
