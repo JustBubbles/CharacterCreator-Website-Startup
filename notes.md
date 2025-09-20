@@ -104,7 +104,7 @@ Ex:
     ```
 
     styles.css
-    ```
+    ```css
     p {
       color: green;
     }
