@@ -213,7 +213,9 @@ p[class*="sum"] {
 }
 ```
 `*=` --> contains substring
+
 `^=` --> starts with substring
+
 `$=` --> ends with substring
 
 ## Pseudo Selector:
