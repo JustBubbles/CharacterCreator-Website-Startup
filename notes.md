@@ -408,6 +408,69 @@ iframe	| Inline frame of another HTML page
 
 Use `<!--[text]-->` in order to mak comments in HTML.
 
+## HTML Input Elements
+<ins>Common HTML Elements That Accept Inputs</ins>
+Element | Meaning	| Example
+|---|---|---|
+form	| Input container and submission	| <form action="form.html" method="post">
+fieldset	| Labeled input grouping	| <fieldset> ... </fieldset>
+input	| Multiple types of user input	| <input type="" />
+select	| Selection dropdown	| <select><option>1</option></select>
+optgroup	| Grouped selection dropdown	| <optgroup><option>1</option></optgroup>
+option	| Selection option	| <option selected>option2</option>
+textarea	| Multiline text input	| <textarea></textarea>
+label	| Individual input label	| <label for="range">Range: </label>
+output	| Output of input	| <output for="range">0</output>
+meter	| Display value with a known range	| <meter min="0" max="100" value="50"></meter>
+
+`form` used to be the only way for the browser to send input data to a web server. Javscript allows us to use input data without sending it to the web server. `form` is often used as a container now because of this.
+
+## HTML Input Element (different from Input Elements above)
+The input element represents many different input types. You set the type of input with the type attribute along with any other attribute associated with that specific input.
+<ins>List of Input Element Types</ins>
+Type	| Meaning
+|---|---|
+text	| Single line textual value
+password	| Obscured password
+email	| Email address
+tel	| Telephone number
+url	| URL address
+number	| Numerical value
+checkbox	| Inclusive selection
+radio	| Exclusive selection
+range	| Range limited number
+date	| Year, month, day
+datetime-local	| Date and time
+month	| Year, month
+week	| Week of year
+color	| Color
+file	| Local file
+submit	| button to trigger form submission
+
+<ins>Common Shared Input Element Attributes</ins>
+Attribute	| Meaning
+|---|---| 
+name | The name of the input. This is submitted as the name of the input if used in a form
+disabled | Disables the ability for the user to interact with the input
+value	| The initial value of the input
+required | Signifies that a value is required in order to be valid
+
+## Data Validation
+Several of the input elements have validation built into them.
+'required' - Boolean. Setting this attribute makes it so a value is needed in order to be submitted.
+Ex:
+```css
+<div class="group">
+  <input type="text" required />
+  <label>Required</label>
+</div>
+```
+`pattern' - exists on text, search, url, tel, email, and password inputs. When present, the pattern attribute provides a regular expression that must match for the input to be considered as valid.
+Ex:
+```css
+<input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code (e.g., USA)">
+```
+
 ## Special Characters
 Entity Syntax for Common Special Characters
 | Character	| Entity |
