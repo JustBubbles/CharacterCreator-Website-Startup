@@ -411,6 +411,7 @@ Use `<!--[text]-->` in order to mak comments in HTML.
 ## Special Characters
 Entity Syntax for Common Special Characters
 | Character	| Entity |
+|---|---|
 | & | \&amp; |
 | <	| \&lt; |
 | >	| \&gt; |
