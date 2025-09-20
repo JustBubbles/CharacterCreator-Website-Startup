@@ -401,16 +401,18 @@ Use `<!--[text]-->` in order to mak comments in HTML.
 ## Special Characters
 Entity Syntax for Common Special Characters
 | Character	| Entity |
-&	| \&amp;
-<	| \&lt;
->	| \&gt;
-"	| \&quot;
-'	| \&apos;
-😀	| \&#128512; (unicode example)
+| & | \&amp; |
+| <	| \&lt; |
+| >	| \&gt; |
+| "	| \&quot; |
+| '	| \&apos; |
+| 😀	| \&#128512; (unicode example) |
 
 You can also use the entity syntax to represent any unicode character.
 
 By default a web server will display the HTML file named `index.html` if a specific HTML file is not requested by the web browser. This is why it's common to name your main HTML file `index.html`.
+
 Ex: You search for `https://google.com`.
+    
     It will actually request for `https://google.com/index.html`.
 
