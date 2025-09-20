@@ -86,7 +86,7 @@ Ex: `<p style="color:green">CSS</p>`
 
 2. Use the HTML style element to define CSS rules within the HTML document. The style element should appear in the head element of the document so that the rules apply to all elements of the document.
 Ex:
-```
+```html
 <head>
   <style>
     p {
@@ -97,7 +97,12 @@ Ex:
 ```
 
 3. Use the HTML link element to create a hyperlink reference to an external file containing CSS rules. The link element must appear in the head element of the document.
-Ex:`<link rel="stylesheet" href="styles.css" />`
+Ex:
+    HTML
+    ```html
+    <link rel="stylesheet" href="styles.css" />
+    ```
+
     styles.css
     ```
     p {
@@ -135,15 +140,16 @@ Combinators allow you to further specify what elements you want changed.
 
 Adjacent sibling = Have same parent. Comes immediatly after the first element.
 Ex:
-```
 HTML:
+```html
 <div>
   <h1>Heading</h1>
   <p>Paragraph 1</p>
   <p>Paragraph 2</p>
 </div>
-
+```
 CSS:
+```css
 h1 + p {
   color: orange;
 }
@@ -152,7 +158,7 @@ This would make any `p` element the color orange if it immediatly follows an `h1
 
 ## Class and ID selectors
 Ex:
-```
+```html
 <body>
   <h1>Departments</h1>
   <p>welcome message</p>
@@ -172,20 +178,21 @@ Ex:
 ```
 Classes can include multiple elements. Use `.[classname]`. Combine with element to target specific types `[element].[classname]`
 Ex:
-```
-Affect whole class
+Affect whole class:
+```css
 .summary {
   font-weight: bold;
 }
-
+```
 Affect certain type of element in a class
+```css
 p.summary {
   font-weight: bold;
 }
 ```
 ID specifies a specific element. Only one element can have that ID. (multiple elements can't have the same ID). Use `#[idname]`.
 Ex:
-```
+```css
 #physics {
   border-left: solid 1em purple;
 }
@@ -196,22 +203,25 @@ Ex:
 - You can also specify a required value for an attribute
 - Attribute selectors also support wildcards such as the ability to select attribute values containing specific text (p[href*="https://"]).
 Ex:
-```
 Select Attribute
+```css
 p[class] {
   color: red;
 }
-
+```
 Select attribute with specific value
+```css
 p[class='summary'] {
   color: red;
 }
-
+```
 Select attr that includes partial value
+```css
 p[class*="sum"] {
   color: red;
 }
 ```
+
 `*=` --> contains substring
 
 `^=` --> starts with substring
@@ -221,7 +231,7 @@ p[class*="sum"] {
 ## Pseudo Selector:
 CSS also defines a significant list of pseudo selectors which select based on positional relationships, mouse interactions, hyperlink visitation states, and attributes.
 Ex:
-```
+```css
 section:hover {
   border-left: solid 1em purple;
 }
@@ -294,7 +304,7 @@ HSL	| hsl(180, 30%, 90%, 0.5)	| Hue, saturation, and light, with an optional opa
 
 To import fonts use `@font-face` and provide font name and source location
 Ex:
-```
+```css
 @font-face {
   font-family: 'Quicksand';
   src: url('https://cs260.click/fonts/quicksand.ttf');
@@ -307,7 +317,7 @@ p {
 If you do not want to host font files on your server, then you can load them from a font provider.
 - Google provides a large selection of open source fonts that you can use without paying any royalties. The easiest way to use Google fonts is to use a CSS import statement to reference the Google Font Service. This will automatically generate the CSS for importing the font.
   - Ex:
-    ```
+    ```css
     @import url('https://fonts.googleapis.com/css2?family=Rubik Microbe&display=swap');
 
     p {
