@@ -277,7 +277,7 @@ vmin	| A percentage of the viewport's smaller dimension
 vmax	| A percentage of the viewport's larger dimension
 
 Ways of Describing Colors
-Method | Example	Description
+|Method | Example	| Description |
 |---|---|---|
 keyword	| red	| A set of predefined colors (e.g. white, cornflowerblue, darkslateblue)
 RGB hex | #00FFAA22 or #0FA2 | Red, green, and blue as a hexadecimal number, with an optional alpha opacity
