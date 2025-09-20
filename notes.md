@@ -81,10 +81,10 @@ Use `traceroute` to see each router you connect to on the way.
 
 # CSS Notes
 ## 3 Ways to impliment CSS
-Use the style attribute of an HTML element and explicitly assign one or more declarations.
+1. Use the style attribute of an HTML element and explicitly assign one or more declarations.
 Ex: `<p style="color:green">CSS</p>`
 
-use the HTML style element to define CSS rules within the HTML document. The style element should appear in the head element of the document so that the rules apply to all elements of the document.
+2. Use the HTML style element to define CSS rules within the HTML document. The style element should appear in the head element of the document so that the rules apply to all elements of the document.
 Ex:
 ```
 <head>
@@ -96,7 +96,7 @@ Ex:
 </head>
 ```
 
-Use the HTML link element to create a hyperlink reference to an external file containing CSS rules. The link element must appear in the head element of the document.
+3. Use the HTML link element to create a hyperlink reference to an external file containing CSS rules. The link element must appear in the head element of the document.
 Ex:`<link rel="stylesheet" href="styles.css" />`
     styles.css
     ```
@@ -118,3 +118,109 @@ Ex:`<link rel="stylesheet" href="styles.css" />`
 ## Things to be aware of:
 -  Any declaration property defined at a lower level will override the higher declaration. (Most recent rule overwrites older rules. rules at the bottom of the page overwrite rules at the top)
 -  "By default, the width and height of an element is defined by the width and height of the content box. You can change the box-sizing CSS property from the default value of content-box to border-box in order to redefine the width and height to also include the padding and the border. This often makes it easier to style elements when their visual size matches their actual size."
+
+## Selectors
+- You "select" an HTML element and apply declarations to it to change aspects of how it's displayed.
+- Selecting `body` will cascade our declaration down to all the children of the body, which is the whole document. This can also be done by using the `*` wildcard element name selector to select all elements.
+
+## Combinators
+Combinators allow you to further specify what elements you want changed.
+
+| Combinator | Meaning	| Example | Description|
+| --- | --- | --- | --- |
+| Descendant | A list of descendants | `body section` |	Any section that is a descendant of a body |
+| Child |	A list of direct children |	`section > p`	| Any p that is a direct child of a section|
+|General sibling |	A list of siblings | `div ~ p` |	Any p that has a div sibling|
+|Adjacent sibling |	A list of adjacent siblings |	`div + p`	| Any p that has an adjacent div sibling|
+
+Adjacent sibling = Have same parent. Comes immediatly after the first element.
+Ex:
+```
+HTML:
+<div>
+  <h1>Heading</h1>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+</div>
+
+CSS:
+h1 + p {
+  color: orange;
+}
+```
+This would make any `p` element the color orange if it immediatly follows an `h1` element. So in this case, paragraph 1 would be orange.
+
+## Class and ID selectors
+Ex:
+```
+<body>
+  <h1>Departments</h1>
+  <p>welcome message</p>
+  <section id="physics">
+    <h2>Physics</h2>
+    <p class="introduction">Introduction</p>
+    <p>Text</p>
+    <p class="summary">Summary</p>
+  </section>
+  <section id="chemistry">
+    <h2>Chemistry</h2>
+    <p class="introduction">Introduction</p>
+    <p>Text</p>
+    <p class="summary">Summary</p>
+  </section>
+</body>
+```
+Classes can include multiple elements. Use `.[classname]`. Combine with element to target specific types `[element].[classname]`
+Ex:
+```
+Affect whole class
+.summary {
+  font-weight: bold;
+}
+
+Affect certain type of element in a class
+p.summary {
+  font-weight: bold;
+}
+```
+ID specifies a specific element. Only one element can have that ID. (multiple elements can't have the same ID). Use `#[idname]`.
+Ex:
+```
+#physics {
+  border-left: solid 1em purple;
+}
+```
+## Attribute Selector:
+- allow you to select elements based upon their attributes.
+- You can use an attribute selector to select any element with a given attribute
+- You can also specify a required value for an attribute
+- Attribute selectors also support wildcards such as the ability to select attribute values containing specific text (p[href*="https://"]).
+Ex:
+```
+Select Attribute
+p[class] {
+  color: red;
+}
+
+Select attribute with specific value
+p[class='summary'] {
+  color: red;
+}
+
+Select attr that includes partial value
+p[class*="sum"] {
+  color: red;
+}
+```
+`*=` --> contains substring
+`^=` --> starts with substring
+`$=` --> ends with substring
+
+## Pseudo Selector:
+CSS also defines a significant list of pseudo selectors which select based on positional relationships, mouse interactions, hyperlink visitation states, and attributes.
+Ex:
+```
+section:hover {
+  border-left: solid 1em purple;
+}
+```
