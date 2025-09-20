@@ -82,9 +82,11 @@ Use `traceroute` to see each router you connect to on the way.
 # CSS Notes
 ## 3 Ways to impliment CSS
 1. Use the style attribute of an HTML element and explicitly assign one or more declarations.
+
 Ex: `<p style="color:green">CSS</p>`
 
 2. Use the HTML style element to define CSS rules within the HTML document. The style element should appear in the head element of the document so that the rules apply to all elements of the document.
+
 Ex:
 ```html
 <head>
@@ -97,6 +99,7 @@ Ex:
 ```
 
 3. Use the HTML link element to create a hyperlink reference to an external file containing CSS rules. The link element must appear in the head element of the document.
+
 Ex:
     HTML
     ```html
@@ -139,6 +142,7 @@ Combinators allow you to further specify what elements you want changed.
 |Adjacent sibling |	A list of adjacent siblings |	`div + p`	| Any p that has an adjacent div sibling|
 
 Adjacent sibling = Have same parent. Comes immediatly after the first element.
+
 Ex:
 HTML:
 ```html
@@ -177,6 +181,7 @@ Ex:
 </body>
 ```
 Classes can include multiple elements. Use `.[classname]`. Combine with element to target specific types `[element].[classname]`
+
 Ex:
 Affect whole class:
 ```css
@@ -191,6 +196,7 @@ p.summary {
 }
 ```
 ID specifies a specific element. Only one element can have that ID. (multiple elements can't have the same ID). Use `#[idname]`.
+
 Ex:
 ```css
 #physics {
@@ -202,6 +208,7 @@ Ex:
 - You can use an attribute selector to select any element with a given attribute
 - You can also specify a required value for an attribute
 - Attribute selectors also support wildcards such as the ability to select attribute values containing specific text (p[href*="https://"]).
+
 Ex:
 Select Attribute
 ```css
@@ -230,6 +237,7 @@ p[class*="sum"] {
 
 ## Pseudo Selector:
 CSS also defines a significant list of pseudo selectors which select based on positional relationships, mouse interactions, hyperlink visitation states, and attributes.
+
 Ex:
 ```css
 section:hover {
@@ -303,6 +311,7 @@ HSL	| hsl(180, 30%, 90%, 0.5)	| Hue, saturation, and light, with an optional opa
 - Symbol fonts represent non-language characters such as arrows or emojis
 
 To import fonts use `@font-face` and provide font name and source location
+
 Ex:
 ```css
 @font-face {
@@ -327,6 +336,7 @@ If you do not want to host font files on your server, then you can load them fro
 
 ## Animations
 Make animations using the `animation` property and defining `keyframes`.
+
 Ex:
 ```css
 p {
@@ -427,6 +437,7 @@ meter	| Display value with a known range	| <meter min="0" max="100" value="50"><
 
 ## HTML Input Element (different from Input Elements above)
 The input element represents many different input types. You set the type of input with the type attribute along with any other attribute associated with that specific input.
+
 <ins>List of Input Element Types</ins>
 Type	| Meaning
 |---|---|
@@ -457,7 +468,9 @@ required | Signifies that a value is required in order to be valid
 
 ## Data Validation
 Several of the input elements have validation built into them.
-'required' - Boolean. Setting this attribute makes it so a value is needed in order to be submitted.
+
+`required` - Boolean. Setting this attribute makes it so a value is needed in order to be submitted.
+
 Ex:
 ```css
 <div class="group">
@@ -465,7 +478,9 @@ Ex:
   <label>Required</label>
 </div>
 ```
-`pattern' - exists on text, search, url, tel, email, and password inputs. When present, the pattern attribute provides a regular expression that must match for the input to be considered as valid.
+
+`pattern` - exists on text, search, url, tel, email, and password inputs. When present, the pattern attribute provides a regular expression that must match for the input to be considered as valid.
+
 Ex:
 ```css
 <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code (e.g., USA)">
