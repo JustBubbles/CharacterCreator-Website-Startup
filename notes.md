@@ -512,6 +512,11 @@ video | Video | \<video width="320" height="240" controls>\<source src="movie.mp
 svg | Scalable Vector Graphics (allows you to draw shapes) | \<svg width="400" height="120">\<rect x="10" y="10" width="200" height="100" fill="blue"/>\</svg>
 canvas | Canvas (using javascript, things can be drawn on the canvas this tag creates) | \<canvas id="myCanvas" width="300" height="150" style="border:1px solid grey">\</canvas>
 
+Helpful attributes for Media Elements
+| Element | Attribute |
+|---|---|
+img | `src` - link to image file. (can be an external or relative link)
+audio | `src`<br>`controls` - provides audio controls<br>`autoplay` - plays audio as soon as the audi file is loaded<br>`loop` - loops the audio
+video | `src`<br>`controls`<br>`autoplay`<br>`loop`<br>`crossorigin="anonymous"` - if you are requesting files from a different domain than the one serving your content (may not need)
 
-
-
+"A relative path references a file that is served from the same location as the HTML page rendering the element. You want to make the path as relative as possible so that you can move your code around without having to actually adjust all of the external page references. For example, if your HTML page is located in a directory with a subdirectory named images that contains a file named photo.jpg you would use a relative path as follows".
