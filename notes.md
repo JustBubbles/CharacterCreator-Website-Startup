@@ -78,3 +78,43 @@ Use `traceroute` to see each router you connect to on the way.
 
 "You can get information about a domain name from the domain name registry using the `whois` console utility."
 `whois byu.edu`
+
+# CSS Notes
+## 3 Ways to impliment CSS
+Use the style attribute of an HTML element and explicitly assign one or more declarations.
+Ex: `<p style="color:green">CSS</p>`
+
+use the HTML style element to define CSS rules within the HTML document. The style element should appear in the head element of the document so that the rules apply to all elements of the document.
+Ex:
+```
+<head>
+  <style>
+    p {
+      color: green;
+    }
+  </style>
+</head>
+```
+
+Use the HTML link element to create a hyperlink reference to an external file containing CSS rules. The link element must appear in the head element of the document.
+Ex:`<link rel="stylesheet" href="styles.css" />`
+    styles.css
+    ```
+    p {
+      color: green;
+    }
+    ```
+
+***All of the above examples are equivalent, but using the `link` element usually is the preferred way to define CSS.\*\*\*
+
+## The CSS Box Model:
+- Everything is defined as boxes
+- Styles are applied to different regions of the box. (regions are boxes within boxes)
+- The innermost box holds the element's content. (text, image, etc. of an element is displayed)
+- Next is padding. (Inhherits things like background color)
+- After padding is the border. (Has thickness, line style, and color)
+- Margin is the final outer box. ("The margin is considered external to the actual styling of the box and therefore only represents whitespace")
+
+## Things to be aware of:
+-  Any declaration property defined at a lower level will override the higher declaration. (Most recent rule overwrites older rules. rules at the bottom of the page overwrite rules at the top)
+-  "By default, the width and height of an element is defined by the width and height of the content box. You can change the box-sizing CSS property from the default value of content-box to border-box in order to redefine the width and height to also include the padding and the border. This often makes it easier to style elements when their visual size matches their actual size."
