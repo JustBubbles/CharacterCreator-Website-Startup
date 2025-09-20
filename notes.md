@@ -267,7 +267,7 @@ px	| The number of pixels
 pt	| The number of points (1/72 of an inch)
 in	| The number of inches
 cm	| The number of centimeters
-%	A | percentage of the parent element
+%	  | A percentage of the parent element
 em	| A multiplier of the width of the letter m in the parent's font
 rem	| A multiplier of the width of the letter m in the root's font
 ex	| A multiplier of the height of the element's font
