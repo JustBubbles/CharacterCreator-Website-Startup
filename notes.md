@@ -40,7 +40,7 @@
   >> - Redirect output to a file. Appends if the file exists
 ```
 ## Example:
-This finds all files that were created in November, using grep to find them \("Global Regular Expression Print\), and count how many of them there are.
+This finds all files that were created in November, using grep to find them ("Global Regular Expression Print), and count how many of them there are.
 `ls -l | grep ' Nov ' | wc -l`
 
 # Git Bash Console Shortcuts
@@ -68,7 +68,7 @@ We would suggest that you do both options. Keep your server running and associat
 I did both.
 
 # Domain Names and IP Addresses
-Domain names make it easy for humans to reference IP addresses. \(Instead of typing the IP address into the search bar, you type a domain name\).
+Domain names make it easy for humans to reference IP addresses. (Instead of typing the IP address into the search bar, you type a domain name).
 To find the IP address a domain name references, use the `dig` command:
 `dig [domain name]`
 
@@ -502,4 +502,16 @@ You can also use the entity syntax to represent any unicode character.
 By default a web server will display the HTML file named `index.html` if a specific HTML file is not requested by the web browser. This is why it's common to name your main HTML file `index.html`.
 
 Ex: You search for `https://google.com`. It will actually request for `https://google.com/index.html`.
+
+## Media Elements
+|Element | Meaning | Example |
+|---|---|---|
+img | Image | \<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+audio | Audio | \<audio controls>\<source src="horse.ogg" type="audio/ogg"></audio>
+video | Video | \<video width="320" height="240" controls>\<source src="movie.mp4" type="video/mp4"></video>
+svg | Scalable Vector Graphics (allows you to draw shapes) | \<svg width="400" height="120">\<rect x="10" y="10" width="200" height="100" fill="blue"/>\</svg>
+canvas | Canvas (using javascript, things can be drawn on the canvas this tag creates) | \<canvas id="myCanvas" width="300" height="150" style="border:1px solid grey">\</canvas>
+
+
+
 
