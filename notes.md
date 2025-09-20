@@ -315,5 +315,37 @@ If you do not want to host font files on your server, then you can load them fro
     }
     ```
 
+## Animations
+Make animations using the `animation` property and defining `keyframes`.
+Ex:
+```
+p {
+  text-align: center;
+  font-size: 20vh;
 
-    
+  animation-name: demo;
+  animation-duration: 3s;
+}
+
+@keyframes demo {
+  from {
+    font-size: 0vh;
+  }
+
+  95% {
+    font-size: 21vh;
+  }
+
+  to {
+    font-size: 20vh;
+  }
+}
+```
+`animation-name` --> let's us specifiy what keyframe to look at for the animation
+
+`animation-duration` --> how long the animation should be
+
+`@keyframes [keyframe name]` --> let's us define what a keyframe should do. (Think of it like a function in programming)
+
+`[x]% {}` --> define what should happen at x% of the way through the animation. (example above shows 95% {})
+
