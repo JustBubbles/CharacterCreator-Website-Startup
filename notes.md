@@ -520,3 +520,43 @@ audio | `src`<br>`controls` - provides audio controls<br>`autoplay` - plays audi
 video | `src`<br>`controls`<br>`autoplay`<br>`loop`<br>`crossorigin="anonymous"` - if you are requesting files from a different domain than the one serving your content (may not need)
 
 "A relative path references a file that is served from the same location as the HTML page rendering the element. You want to make the path as relative as possible so that you can move your code around without having to actually adjust all of the external page references. For example, if your HTML page is located in a directory with a subdirectory named images that contains a file named photo.jpg you would use a relative path as follows".
+
+
+# Deploying Files
+
+use this deployFiles.sh script:
+```sh
+#!/bin/bash
+
+while getopts k:h:s: flag
+do
+    case "${flag}" in
+        k) key=${OPTARG};;
+        h) hostname=${OPTARG};;
+        s) service=${OPTARG};;
+    esac
+done
+
+if [[ -z "$key" || -z "$hostname" || -z "$service" ]]; then
+    printf "\nMissing required parameter.\n"
+    printf "  syntax: deployFiles.sh -k <pem key file> -h <hostname> -s <service>\n\n"
+    exit 1
+fi
+
+printf "\n----> Deploying files for $service to $hostname with $key\n"
+
+# Step 1
+printf "\n----> Clear out the previous distribution on the target.\n"
+ssh -i "$key" ubuntu@$hostname << ENDSSH
+rm -rf services/${service}/public
+mkdir -p services/${service}/public
+ENDSSH
+
+# Step 2
+printf "\n----> Copy the distribution package to the target.\n"
+scp -r -i "$key" * ubuntu@$hostname:services/$service/public
+```
+
+use this command to run the script:
+
+`./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s startup`
