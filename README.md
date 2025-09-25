@@ -30,16 +30,16 @@
 <img width="1207" height="733" alt="CharacterCreatorPage" src="https://github.com/user-attachments/assets/489776e8-c485-4422-a54b-f1be255aa29e" />
 
 # HTML Deliverable
-[] HTML pages - 6 HTML pages that represent the homepage, login/account creation page, tools page, character creation page, private character browse page, and public character browse page.
+[x] HTML pages - 6 HTML pages that represent the homepage, login/account creation page, tools page, character creation page, private character browse page, and public character browse page.
 
-[] Links - The homepage has links for every other page. Other pages have a back button for access to the mainpage, login page, and github.
+[x] Links - The homepage has links for every other page. Other pages have a back button for access to the mainpage, login page, and github.
 
-[] Text - Text is used to represent private characters owned by the user on the private character browse page.
+[x] Text - Text is used to represent private characters owned by the user on the private character browse page.
 
-[] Images - I used SVG to represent the character images on the main page and characer browse pages.
+[x] Images - I used SVG to represent the character images on the main page and characer browse pages.
 
-[] Login - I have a login page that will allow the user to either create and account or login to their account.
+[x] Login - I have a login page that will allow the user to either create and account or login to their account.
 
-[] Database - I have a list of characters in the private character browse page that is aquired from a database.
+[x] Database - I have a list of characters in the private character browse page that is aquired from a database.
 
-[] WebSocket - The main page and the public character browse will represent characters that have been uploaded in realtime. Represented by the circles, which will be character portraits in the finished product.
+[x] WebSocket - The main page and the public character browse will represent characters that have been uploaded in realtime. Represented by the circles, which will be character portraits in the finished product.
