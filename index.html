@@ -7,21 +7,30 @@
 
 <body>
     <main>
-        <header>
+        <header class="sticky-top">
+            <span id="website_title">OC/Roleplaying Game Character Maker</span>
             <nav class="nav nav-tabs">
                 <button type="button" id="git_hub_button"> <a href="https://github.com/JustBubbles/CharacterCreator-Website-Startup.git">GitHub</a> </button>
                 <li class="nav-link active"> <a href="/index.html" id="active_tab">Home</a></li>
-                <li class="nav-link"> <a href="/login.html">Login</a> </li>
-                <li class="nav-link"> <a href="/character_creation.html">Create Character</a> </li>
-                <li class="nav-link"> <a href="/browse_private_char.html">View Characters</a> </li>
-                <li class="nav-link"> <a href="/character_tools.html">Tools</a> </li>
+                <li class="nav-link"> <a class="nav_item" href="/login.html">Login</a> </li>
             </nav> 
-            <h4>By Braiden Pitts</h4>
+
+            <nav id="character_items_nav" class="nav flex-column">
+                <li class="nav-link"> <a class="nav_item" href="/character_creation.html">Create Character</a> </li>
+                <li class="nav-link"> <a class="nav_item" href="/browse_private_char.html">View Characters</a> </li>
+                <li class="nav-link"> <a class="nav_item" href="/character_tools.html">Tools</a> </li>
+            </nav>
         </header>
+        
+        <p>By Braiden Pitts</p>
+        
+        <h1>Welcome!</h1>
+        <h4>About</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas dicta sunt accusamus tempora doloremque consequatur fugiat assumenda vel earum aliquid, praesentium aperiam blanditiis iusto doloribus quas maiores ut sit!</p>
 
         <button type="button"><a href="/browse_public_char.html">Browse Other Creations</a></button>
         
-        <span>
+        <span id="other_creations_page">
             <br>
             <svg width="150" height="150">
                 <circle cx="50" cy="100" r = "50" fill="grey" stroke="black" stroke-width="2">
@@ -63,9 +72,9 @@
             </svg>
         </span>
     </main>
+
+    <footer>
+        <span>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+    </footer>
+
 </body>
-
-
-<footer>
-
-</footer>

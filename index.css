@@ -1,19 +1,46 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+}
 header {
-    background-color: #EFE7DC;
+    background-color: #5e4cae8c;
+    flex: 0 1 auto;
 }
 nav {
-    background-color: #5E4CAE;
+    background-color: #5e4cae8c;
 }
 
 footer {
     background-color: #2A2A13;
+    color: #C48D3B;
+    padding-top: 1rem;
+    margin: 0rem 0rem 0rem;
+    flex: 0 1 auto;
 }
 main{
     background-color: #EFE7DC;
+    padding-bottom: 5rem;
+    flex: 1 1 auto; 
 }
 
+
+#website_title {
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+}
+.nav_item {
+    color: white;
+}
 #git_hub_button {
     background-color: white;
     color: blue;
 }
 
+#character_items_nav {
+    float:inline-end;
+    padding: 3vw 1.5vw 3vw 1.5vw;
+    font-size: 1.75cqw;
+}
