@@ -8,6 +8,12 @@ header {
     background-color: #5e4cae8c;
     flex: 0 1 auto;
 }
+#character_items_nav {
+    float: inline-end;
+    padding: 3vw 1.5vw 3vw 1.5vw;
+    font-size: 1.75cqw;
+}
+
 nav {
     background-color: #5e4cae8c;
 }
@@ -39,8 +45,3 @@ main{
     color: blue;
 }
 
-#character_items_nav {
-    float:inline-end;
-    padding: 3vw 1.5vw 3vw 1.5vw;
-    font-size: 1.75cqw;
-}
